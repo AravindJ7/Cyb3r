@@ -306,3 +306,62 @@ A **Fraggle attack** is a type of **Denial of Service (DoS)** attack similar to 
 | **Main Countermeasure**    | Close unnecessary UDP ports, disable broadcast responses, and filter spoofed packets |
 
 ---
+# Dictionary Attack: Explanation and Countermeasures
+
+---
+
+## What is a Dictionary Attack?
+
+A **dictionary attack** is a type of password attack where an attacker tries to guess a user’s password by systematically trying words from a predefined list, typically a list of common words found in a dictionary.
+
+### How Does a Dictionary Attack Work?
+
+- Many users choose passwords that are **real words** or simple variations of real words.
+- Instead of trying every possible combination like a brute-force attack, attackers use a **"dictionary"** of common words, phrases, or leaked passwords.
+- This significantly **speeds up the attack** because the attacker focuses on likely passwords.
+- The attacker attempts to log in by trying each word in the dictionary until the correct password is found.
+- Dictionary attacks are often combined with other techniques such as **adding numbers or symbols** to common words to increase chances of success.
+
+### Why is it Effective?
+
+- Humans tend to choose easy-to-remember passwords, often based on real words.
+- Attackers exploit this tendency by targeting these likely passwords first.
+- Dictionary attacks are faster and require less computing power than brute force attacks.
+
+---
+
+## Countermeasures to Prevent Dictionary Attacks
+
+### 1. Lock Out Users After Failed Login Attempts
+
+- Implement an **account lockout policy** that temporarily locks the user’s account after a certain number of failed login attempts.
+- This slows down or stops automated dictionary attacks by limiting the number of guesses an attacker can make in a short time.
+
+### 2. Avoid Using Dictionary Words as Passwords
+
+- Users should create **strong passwords** that do not contain simple dictionary words.
+- Passwords should be a combination of **uppercase and lowercase letters, numbers, and special characters**.
+- Using **passphrases** (long combinations of unrelated words or characters) can also improve security.
+
+### 3. Use Multi-Factor Authentication (MFA)
+
+- MFA adds an extra layer of security, requiring a second form of verification beyond the password.
+- Even if a password is guessed, the attacker cannot access the account without the second factor.
+
+### 4. Educate Users on Strong Password Practices
+
+- Teach users the importance of creating complex, unique passwords.
+- Promote the use of password managers to generate and store strong passwords securely.
+
+---
+
+## Summary Table
+
+| Countermeasure                    | Description                                                   |
+|----------------------------------|---------------------------------------------------------------|
+| Account Lockout                  | Locks user after X failed login attempts                      |
+| Avoid Dictionary Words           | Use passwords not based on common dictionary words            |
+| Multi-Factor Authentication (MFA) | Adds extra verification layer beyond just passwords           |
+| User Education                  | Teach users to create strong, unique passwords                 |
+
+---
