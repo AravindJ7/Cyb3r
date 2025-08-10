@@ -306,5 +306,3 @@ A **Fraggle attack** is a type of **Denial of Service (DoS)** attack similar to 
 | **Main Countermeasure**    | Close unnecessary UDP ports, disable broadcast responses, and filter spoofed packets |
 
 ---
-
-Would you like me to provide this as a Markdown file or explain more on related network attacks?  
