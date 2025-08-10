@@ -503,4 +503,63 @@ A **dictionary attack** is a type of password attack where an attacker tries to 
 | SSRF                   | Tricks server into making unauthorized requests     | Input validation, Whitelisting    |
 
 ---
+# Social Engineering: Explanation and Countermeasures
+
+---
+
+## What is Social Engineering?
+
+**Social engineering** is the art of manipulating people into giving up confidential or sensitive information. Instead of hacking systems directly, criminals target individuals by exploiting human psychology.
+
+### How Does Social Engineering Work?
+
+- Attackers impersonate trusted entities or create convincing scenarios to trick victims.
+- Common goals include stealing passwords, bank information, or gaining access to computers to install malware.
+- Techniques may involve phone calls, emails (phishing), chat messages, or even in-person interactions.
+- Attackers rely on fear, urgency, trust, or curiosity to manipulate their targets.
+
+---
+
+## Why is Social Engineering Effective?
+
+- It exploits **human weaknesses** rather than technical vulnerabilities.
+- People are often the **weakest link** in security.
+- Attackers can bypass technical controls by tricking users directly.
+
+---
+
+## Countermeasures to Prevent Social Engineering
+
+### 1. Never Share Confidential Information with Unknown or Suspicious Sources
+
+- Do **not provide sensitive or non-sensitive information** (passwords, credentials, personal data) via email, chat, phone, or in-person unless you are absolutely sure about the recipient’s identity.
+
+### 2. Be Cautious with Links and Emails
+
+- Before clicking on links in emails or websites, carefully inspect the URL for **misspellings, unusual characters (@ signs), or suspicious subdomains**.
+- Avoid opening emails or attachments from untrusted or unknown senders.
+
+### 3. Employee Awareness and Training
+
+- Regularly train employees and users about social engineering tactics.
+- Conduct simulated phishing tests and awareness programs to keep users vigilant.
+
+### 4. Use Two-Factor Authentication (2FA)
+
+- Add an additional layer of security by requiring a second verification step beyond the password.
+- Even if credentials are compromised, 2FA can prevent unauthorized access.
+
+---
+
+## Summary Table
+
+| Countermeasure                   | Description                                                  |
+|---------------------------------|--------------------------------------------------------------|
+| Avoid Sharing Sensitive Info    | Never share confidential data with unknown or suspicious contacts |
+| Inspect Links Carefully          | Check for misspellings, odd characters, and suspicious domains |
+| Employee Awareness Training     | Educate users to recognize and avoid social engineering attacks |
+| Two-Factor Authentication (2FA)| Add extra layer of security beyond just passwords             |
+
+---
+
 
