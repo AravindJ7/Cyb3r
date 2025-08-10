@@ -365,3 +365,67 @@ A **dictionary attack** is a type of password attack where an attacker tries to 
 | User Education                  | Teach users to create strong, unique passwords                 |
 
 ---
+# Cross-Site Scripting (XSS) Attack: Explanation and Countermeasures
+
+---
+
+## What is Cross-Site Scripting (XSS)?
+
+**Cross-Site Scripting (XSS)** is a web security vulnerability that allows an attacker to inject malicious scripts (usually JavaScript) into web pages viewed by other users.
+
+### How Does XSS Work?
+
+- The attacker finds a way to insert malicious code into an application’s input fields, such as comment boxes, search bars, or form inputs.
+- When a legitimate user requests the affected webpage, the server includes the attacker’s malicious code in the response.
+- The user’s browser executes the malicious script unknowingly.
+- Through this script, the attacker can steal sensitive information like cookies, session tokens, or manipulate webpage content.
+- This can lead to **account hijacking**, **data theft**, or performing actions on behalf of the user without their consent.
+
+---
+
+## Types of XSS Attacks
+
+1. **Stored XSS (Persistent):**  
+   Malicious script is permanently stored on the target server (e.g., in a database) and served to users.
+
+2. **Reflected XSS (Non-Persistent):**  
+   Malicious script is reflected off a web server (e.g., in error messages or search results) and immediately sent back to the user.
+
+3. **DOM-based XSS:**  
+   Vulnerability exists in the client-side code (JavaScript) that modifies the DOM without proper validation.
+
+---
+
+## Countermeasures to Prevent XSS
+
+### 1. Safely Validate and Sanitize Untrusted Input
+
+- Always treat user inputs as untrusted.
+- Use input validation to restrict allowed characters or patterns.
+- Use **output encoding/escaping** when rendering data to HTML to ensure injected scripts are not executed.
+- Employ security libraries or frameworks that automatically handle sanitization.
+
+### 2. Secure Cookies
+
+- Use the **HttpOnly** flag on cookies to prevent client-side scripts from accessing them.
+- Use the **Secure** flag to ensure cookies are only sent over HTTPS connections.
+- Consider using **SameSite** attribute to restrict cross-site cookie sending.
+
+### 3. Disable or Restrict Scripts
+
+- Implement Content Security Policy (CSP) headers to control and restrict sources of executable scripts.
+- Disable unnecessary scripts and plugins on your webpages.
+- Use security tools and scanners to detect XSS vulnerabilities in your application.
+
+---
+
+## Summary
+
+| Countermeasure               | Description                                                                                 |
+|-----------------------------|---------------------------------------------------------------------------------------------|
+| Input Validation and Sanitization | Filter and escape untrusted user inputs to prevent execution of malicious scripts           |
+| Secure Cookies              | Use HttpOnly, Secure, and SameSite flags to protect cookies from theft and misuse           |
+| Disable or Restrict Scripts | Implement Content Security Policy and limit script execution to trusted sources             |
+
+---
+
