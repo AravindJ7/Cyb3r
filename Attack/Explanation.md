@@ -429,3 +429,78 @@ A **dictionary attack** is a type of password attack where an attacker tries to 
 
 ---
 
+# CSRF and SSRF Attacks: Explanation and Countermeasures
+
+---
+
+## 1. Cross-Site Request Forgery (CSRF)
+
+### What is CSRF?
+
+**Cross-Site Request Forgery (CSRF)** is a web security vulnerability where an attacker tricks a logged-in user into sending unauthorized HTTP requests to a trusted web application without their knowledge.
+
+### How Does CSRF Work?
+
+- The victim is authenticated and logged into a target website.
+- The attacker tricks the victim (via malicious link, email, or website) to send a request to the target site.
+- The target site processes the request as if it was made intentionally by the victim.
+- This can lead to unwanted actions like changing passwords, making transactions, or deleting data.
+
+### Why is CSRF Dangerous?
+
+- Exploits the victim’s authenticated session.
+- Victim unaware of the malicious action.
+- Can lead to serious consequences such as data loss or financial fraud.
+
+### Countermeasures for CSRF
+
+| Countermeasure            | Description                                                   |
+|--------------------------|---------------------------------------------------------------|
+| Anti-CSRF Tokens         | Embed unique tokens in forms and verify them on the server.    |
+| Re-authentication        | Require password input for sensitive operations.               |
+| SameSite Cookies         | Use `SameSite` attribute to restrict cookies in cross-site requests. |
+| Referer/Origin Header Checks | Validate HTTP headers to ensure request origin is trusted.      |
+| User Education           | Advise users to avoid suspicious links while logged in.        |
+
+---
+
+## 2. Server-Side Request Forgery (SSRF)
+
+### What is SSRF?
+
+**Server-Side Request Forgery (SSRF)** is a vulnerability where an attacker tricks a vulnerable server into making HTTP or network requests to unintended locations, including internal systems.
+
+### How Does SSRF Work?
+
+- The attacker sends a request to the vulnerable server containing a URL or network address.
+- The server processes this input and makes a request to the specified location.
+- The attacker can use this to access internal services, sensitive data, or scan internal networks.
+- SSRF can bypass firewalls since the request originates from the trusted server.
+
+### Why is SSRF Dangerous?
+
+- Can expose internal-only services and data.
+- Enables attackers to perform internal port scans or access restricted resources.
+- May lead to data breaches or further exploitation.
+
+### Countermeasures for SSRF
+
+| Countermeasure            | Description                                                   |
+|--------------------------|---------------------------------------------------------------|
+| Input Validation         | Strictly validate and sanitize URLs or network addresses provided by users. |
+| Whitelisting             | Allow requests only to a predefined set of trusted domains/IPs. |
+| Disable Unnecessary Protocols | Restrict protocols (e.g., file://, ftp://) that the server can access.   |
+| Network Segmentation     | Isolate internal services from servers facing the internet.    |
+| Monitoring and Logging   | Log outgoing requests and monitor for suspicious activity.     |
+
+---
+
+## Summary Table
+
+| Attack Type             | Description                                   | Key Countermeasure                |
+|------------------------|-----------------------------------------------|----------------------------------|
+| CSRF                   | Tricks user’s browser into sending unwanted requests | Anti-CSRF tokens, SameSite cookies |
+| SSRF                   | Tricks server into making unauthorized requests     | Input validation, Whitelisting    |
+
+---
+
